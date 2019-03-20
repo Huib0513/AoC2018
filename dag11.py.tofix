@@ -1,0 +1,14 @@
+#!python3
+
+serial = 57
+value = {}
+
+for y in range(300):
+    for x in range(300):
+        power = ((x+10)*y + serial)*(x+10)
+        print(power)
+        power = power/100
+        value[x,y] = int(str(power)[-1])-5
+
+print(value)
+print(value[122,79])
